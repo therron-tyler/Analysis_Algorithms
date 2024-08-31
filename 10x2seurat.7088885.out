@@ -1,0 +1,100 @@
+Loading required package: SeuratObject
+Loading required package: sp
+
+Attaching package: ‘SeuratObject’
+
+The following object is masked from ‘package:base’:
+
+    intersect
+
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+10X data contains more than one type and is being returned as a list containing matrices of each type.
+10X data contains more than one type and is being returned as a list containing matrices of each type.
+[1] "read in 10x directories"
+Warning: Feature names cannot have underscores ('_'), replacing with dashes ('-')
+Warning: Feature names cannot have underscores ('_'), replacing with dashes ('-')
+[1] "create seurat object"
+[1] "annotated cell origins before merging"
+[1] "merged objects"
+[1] "save raw RDS"
+Normalizing layer: counts.Gene Expression.Day0_BMC_STIA_Macs
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Normalizing layer: counts.Gene Expression.Day7_BMC_STIA_Macs
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Normalizing layer: counts.Antibody Capture.Day0_BMC_STIA_Macs
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Normalizing layer: counts.Antibody Capture.Day7_BMC_STIA_Macs
+Performing log-normalization
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+[1] "log transform - factor is 10k"
+Finding variable features for layer counts.Gene Expression.Day0_BMC_STIA_Macs
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Finding variable features for layer counts.Gene Expression.Day7_BMC_STIA_Macs
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Finding variable features for layer counts.Antibody Capture.Day0_BMC_STIA_Macs
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Finding variable features for layer counts.Antibody Capture.Day7_BMC_STIA_Macs
+Calculating gene variances
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Calculating feature variances of standardized and clipped values
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Error in `.SelectFeatures()`:
+! None of the features provided are present in the feature set
+Backtrace:
+    ▆
+ 1. ├─Seurat::FindVariableFeatures(...)
+ 2. └─Seurat:::FindVariableFeatures.Seurat(...)
+ 3.   ├─Seurat::FindVariableFeatures(...)
+ 4.   └─Seurat:::FindVariableFeatures.StdAssay(...)
+ 5.     ├─SeuratObject::VariableFeatures(...)
+ 6.     └─SeuratObject:::VariableFeatures.Assay5(...)
+ 7.       ├─SeuratObject::.SelectFeatures(...)
+ 8.       └─SeuratObject:::.SelectFeatures.list(...)
+ 9.         └─rlang::abort(message = "None of the features provided are present in the feature set")
+Execution halted
